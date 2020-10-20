@@ -1,0 +1,423 @@
+
+/*
+    Theme Name: Babai's Portfolio
+    Author: Chiranjibi Pramanick
+    Email: babai.pramanick2014@gmail.com
+    Description: One Page Portfolio Multiple Section Template
+    Portfolio-Content-Subject: HTML-5,CSS-3,JQUERY,BOOTSTRAP-4
+*/
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@100;300;400;500;700;900&display=swap');
+:root{
+    --bg-color:#333;
+    --grey-color:grey;
+    --white-color:#fff;
+    --black-color:#000;
+    --blue-color:blue;
+}
+/*=============Common Style==================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+::selection{
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+a{
+    font-size: 1.5rem;
+}
+p{
+    color: var(--grey-color) !important;
+}
+.social_slide{
+    position: fixed;
+    right: 0%;
+    top: 40%;
+    width: 4rem;
+    height: 15rem;
+    z-index: 22222;
+}
+.social_slide i{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 2.2rem;
+    color: var(--white-color);
+    padding: .6rem;
+    margin: .6rem 0rem;
+}
+.fa-facebook{
+    background-color: var(--blue-color);
+}
+.fa-facebook:hover{
+    background-color: rgb(91, 91, 245);
+}
+.fa-twitter{
+    background-color: orangered;
+}
+.fa-twitter:hover{
+    background-color: rgb(248, 111, 61);
+}
+.fa-google-plus{
+    background-color: maroon;
+}
+.fa-google-plus:hover{
+    background-color: rgb(194, 39, 39);
+}
+.to_top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: none;
+    z-index: 9999999;
+}
+.to_top i{
+    color: var(--blue-color);
+    transition: 0.5s ease-in-out;
+}
+.to_top i:hover{
+    color: var(--white-color);
+}
+
+/*=============Nav Style==================*/
+.nav-bg{
+    background-color: var(--black-color);
+    transition: 1s ease-in-out;
+}
+
+.navbar-brand{
+    font-size: 2.7rem !important;
+    color: var(--white-color) !important;
+}
+.navbar-nav .nav-item .nav-link{
+    position: relative;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 1.5rem;
+    color: var(--white-color);
+}
+.navbar-nav .nav-item .nav-link:before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0%;
+    height: .4rem;
+    bottom: 0;
+    background-color: var(--blue-color);
+    transition: 0.5s ease-in-out;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover{
+    color:var(--blue-color);
+ }
+.navbar .navbar-nav .nav-link:hover:before{
+    width:100%
+}
+
+/*=============Hero Style==================*/
+#hero{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(../images/new_modified.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.hero_caption{
+    position: absolute;
+    top:50%;
+}
+.hero_caption h1{
+    font-size: 4.5rem;
+    font-weight: 900;
+    padding: 1rem;
+}
+.hero_caption h3{
+    font-size: 2.9rem;
+    font-weight: 700;
+    color: var(--blue-color);
+    text-shadow: 1px 1px 1px white;
+}
+
+/*=============About Style==================*/
+#about{
+    position: relative;
+    height: 60rem;
+    padding: 0rem;
+    background-color: rgb(66, 66, 66);
+}
+#about .abt_bg{
+    position: absolute;
+    height: 50rem;
+    right: 0;
+    bottom: 0;
+    filter: drop-shadow(-1px -1px 3px white);
+}
+#about .col-md-6{
+    height: 60rem;
+}
+.abt_left{
+    position: relative;
+    top: 40%;
+}
+#about h4{
+    font-size: 3rem;
+    font-weight: 700;
+    transform: uppercase;
+}
+#about p{
+    font-size: 1.5rem;
+}
+#about a{
+    background-color: var(--blue-color);
+    position: relative;
+    padding: .8rem 1.8rem;
+    transition: 0.5s ease-in-out;
+}
+
+/*=============My Skill Style==================*/
+#myskills{
+    padding: 5rem 0rem;
+    /*background: linear-gradient(250deg,black,white);*/
+    background-color: var(--bg-color);
+}
+.abt_title{
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.abt_title:before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 10rem;
+    top: 50%;
+    left: 0%;
+    height: .2rem;
+    background-color: var(--blue-color);
+}
+.abt_title:after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 10rem;
+    top: 50%;
+    right: 0%;
+    height: .2rem;
+    background-color: var(--blue-color);
+}
+.skills_description{
+    padding-top: 5rem;
+}
+.skills_description h5{
+    font-weight: 700;
+    font-size: 2rem;
+}
+.skills_description p{
+    font-size: 1.8rem;
+}
+.skills_description a{
+    font-size: 1.7rem;
+}
+.skills_bar_content{
+    padding-left: 5rem;
+}
+.skills_bar{
+    margin-bottom: 2rem;
+}
+.skills_bar h6{
+    font-size: 1.6rem;
+}
+.skills_bar span{
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    border-radius: 20px;
+    height: 1rem;
+    background-color: var(--white-color);
+}
+.skills_bar span:before{
+    color: var(--white-color);
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 900;
+    line-height: 1.2rem;
+    position: absolute;
+    display:block;
+    height: 1.2rem;
+    background-color: red;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.skills_bar .html:before{
+    width: 90%;
+    content: "90%";
+}
+.skills_bar .css:before{
+    width: 85%;
+    content: "85%";
+}
+.skills_bar .js:before{
+    width: 50%;
+    content: "50%";
+}
+.skills_bar .bs:before{
+    width: 70%;
+    content: "70%";
+}
+.skills_bar .sass:before{
+    width: 50%;
+    content: "50%";
+}
+.skills_bar .react:before{
+    width: 40%;
+    content: "40%";
+}
+.skills_bar .npm:before{
+    width: 60%;
+    content: "60%";
+}
+.skills_bar .php:before{
+    width: 60%;
+    content: "60%";
+}
+.skills_bar .mysql:before{
+    width: 65%;
+    content: "65%";
+}
+
+/*=============Work Style==================*/
+#work{
+    padding: 5rem 0rem;
+    background-color: rgb(66, 66, 66);
+}
+.work_title{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.work_title p{
+    font-size: 1.8rem;
+}
+.work-description{
+    padding-top: 5rem;
+}
+#work img{
+    width: 40rem;
+    height: 120rem;
+    margin: 0rem .5rem;
+}
+
+/*=============Contact Style==================*/
+#contact{
+    background-color: var(--bg-color);
+    padding: 5rem;
+}
+.contact_title{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+#contact p{
+    font-size: 1.6rem;
+}
+.contact_description {
+    padding-top: 5rem;
+}
+.contact_description i{
+    color: rgb(8, 182, 182);
+    font-size: 2.2rem;
+    margin-right: 2rem;
+}
+.contact_description h3{
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.contact_description h6,label{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgb(8, 182, 182);
+    text-shadow: 1px 1px 1px var(--black-color);
+}
+.contact_description input,.contact_description textarea,.contact_description a{
+    font-size: 1.6rem !important;
+    background-color: var(--bg-color) !important;
+}
+.contact_description p{
+    color: var(--grey-color);
+}
+.address_details,.phone_details{
+    margin-bottom: 4rem;
+}
+
+/*=============Footer Style==================*/
+footer{
+    background-color: var(--black-color);
+    height: 5rem;
+}
+footer p{
+    line-height: 5rem;
+}
+
+
+
+
+
+/*Responsive layout Style*/
+@media (max-width: 575.98px){
+    html{
+        font-size: 35%;
+    }
+    .navbar-toggler-icon{
+        font-size: 2.5rem;
+    }
+    .skills_description .col-md-6:first-child{
+        margin-bottom: 5rem;
+    }
+    .skills_bar_content{
+        padding-left: 0rem;
+    }
+    .contact_description .col-md-4{
+        margin-bottom: 5rem;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    html{
+        font-size: 45%;
+    }
+    .skills_description .col-md-6:first-child{
+        margin-bottom: 5rem;
+    }
+    .contact_description .col-md-4{
+        margin-bottom: 5rem;
+    }
+ }
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    html{
+        font-size: 50%;
+    }
+    
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px){
+    html{
+        font-size: 55%;
+    }
+    
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    /*==========ok================*/
+}
